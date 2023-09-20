@@ -23,6 +23,7 @@ Inisiasi project Express dan pemasangan package
 
 
 Koneksi Express ke MongoDB
+
 1. Buatlah file index.js pada root folder dan masukkan kode di bawah ini
 
 require('dotenv').config();
@@ -110,3 +111,35 @@ console.log('Mongo connected');
     ![Alt text](image-12.png)
 
 
+Pembuatan routing
+
+1. Lakukan pembuatan direktori routes di tingkat yang sama dengan index.js
+![Alt text](image-13.png)
+
+2. Buatlah file book.route.js di dalamnya
+![Alt text](image-14.png)
+
+3. Tambahkan baris kode berikut untuk fungsi getAllBooks
+
+const router = require('express').Router();
+
+router.get('/', function getAllBooks(req, res) {
+
+res.status(200).json({
+
+message: 'mendapatkan semua buku'
+
+})
+
+})
+
+module.exports = router;
+![Alt text](image-15.png)
+
+4. Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan deleteBook
+![Alt text](image-16.png)
+
+5. Lakukan import book.route.js pada file index.js
+![Alt text](image-17.png)
+
+6. Uji salah satu endpoint dengan Postman

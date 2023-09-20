@@ -1,4 +1,4 @@
-Praktikum 1 : CRUD MongoDB
+Praktikum 2 : CRUD MongoDB
 
 
 

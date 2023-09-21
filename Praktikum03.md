@@ -108,7 +108,7 @@ console.log('Mongo connected');
 ![Alt text](image-11.png)
 
     Setelah itu coba jalankan aplikasi kembali
-    ![Alt text](image-12.png)
+![Alt text](image-12.png)
 
 
 Pembuatan routing
@@ -143,3 +143,54 @@ module.exports = router;
 ![Alt text](image-17.png)
 
 6. Uji salah satu endpoint dengan Postman
+![Alt text](image-18.png)
+
+
+Pembuatan controller
+
+1. Lakukan pembuatan direktori controllers di tingkat yang sama dengan index.js
+![Alt text](image-19.png)
+
+2. Buatlah file book.controller.js di dalamnya
+![Alt text](image-20.png)
+
+3. Salin baris kode dari routes untuk fungsi getAllBooks
+![Alt text](image-21.png)
+
+4. Lakukan hal yang sama untuk getOneBook, createBook, updateBook, dan deleteBook
+![Alt text](image-22.png)
+
+5. Lakukan import book.controller.js pada file book.route.js
+![Alt text](image-23.png)
+
+6. Lakukan perubahan pada fungsi agar dapat memanggil fungsi dari book.controller.js
+![Alt text](image-24.png)
+
+7. Lakukan pengujian kembali, pastikan response tetap sama
+![Alt text](image-25.png)
+
+
+Pembuatan model
+
+1. Lakukan pembuatan direktori models di tingkat yang sama dengan index.js
+![Alt text](image-26.png)
+
+2. Buatlah file book.model.js di dalamnya
+![Alt text](image-27.png)
+
+3. Tambahkan baris kode berikut sesuai dengan tabel di atas
+![Alt text](image-28.png)
+
+
+Operasi CRUD
+
+1. Hapus semua data pada collection books
+![Alt text](image-29.png)
+
+2. Lakukan import book.model.js pada file book.controller.js
+![Alt text](image-30.png)
+
+3. Lakukan perubahan pada fungsi createBook
+![Alt text](image-31.png)
+
+4. Buatlah dua buah buku dengan data di bawah ini dengan Postman
